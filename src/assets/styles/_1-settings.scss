@@ -1,0 +1,134 @@
+// Fonts
+$pressStartFontName: 'PressStart2P';
+$pressStart: $pressStartFontName;
+
+// Weight
+$bold: 600;
+
+//---------- Colors ----------//
+// stylelint-disable color-no-hex
+// Primary
+$green: #56e959;
+$light-blue: #65ccf5;
+$light-red: #b84946;
+$light-yellow: #fae43d;
+$marine-blue: #173568;
+$orange: #ff5500;
+$salmon-pink: #e59fa2;
+
+// Secondary
+
+// Semantic
+
+// Neutral
+$cream-white: #eeecec;
+$graphite-grey: #333333;
+$light-grey: #dbdbdb;
+$neutral-black: #1b1b1b;
+$neutral-grey: #8d8c91;
+$neutral-light-grey: #999999;
+$neutral-white: #f7f7f7;
+
+$black: #000000;
+$white: #ffffff;
+// stylelint-enable color-no-hex
+
+// Breakpoints
+$breakpoint-sm-min: 576px;
+$breakpoint-md-min: 768px;
+$breakpoint-lg-min: 992px;
+$breakpoint-xl-min: 1280px;
+$breakpoint-xxl-min: 1440px;
+
+$breakpoint-xs-max: $breakpoint-sm-min - 1;
+$breakpoint-sm-max: $breakpoint-md-min - 1;
+$breakpoint-md-max: $breakpoint-lg-min - 1;
+$breakpoint-lg-max: $breakpoint-xl-min - 1;
+$breakpoint-xl-max: $breakpoint-xxl-min - 1;
+
+// Transitions
+$transition-duration-fast: 0.25s;
+$transition-duration-medium: 0.5s;
+
+//----------------------------//
+
+// Layout
+$page-max-width: 128rem;
+
+$page-margin-x-lg: 6rem;
+$page-margin-x-md: 3.2rem;
+$page-margin-x-sm: 2rem;
+
+$page-margin-y-lg: 4.4rem;
+$page-margin-y-md: 3.2rem;
+$page-margin-y-sm: 2rem;
+
+$block-margin-x-lg: 12rem;
+$block-margin-x-md: 6.4rem;
+$block-margin-x-sm: 4rem;
+
+$block-margin-y-lg: 2rem;
+$block-margin-y-md: 3.2rem;
+$block-margin-y-sm: 2rem;
+
+// Sizes
+$one_sixth: 16.667%;
+$one_quarter: 25%;
+$one_third: 33.334%;
+$one_half: 50%;
+$four_sixth: 66.667%;
+
+// Header
+$header-padding-top-y-lg: 1.2rem;
+$header-padding-top-y-md: 2.2rem;
+$header-padding-top-y-sm: 1.5rem;
+$header-padding-bottom-y-lg: 2.5rem;
+$header-padding-bottom-y-md: 1.5rem;
+$header-padding-bottom-y-sm: 1.5rem;
+
+$logo-lg: 3rem;
+$logo-sm: 5rem;
+
+$header-height-lg: ($header-padding-top-y-lg + $header-padding-bottom-y-lg) +
+  $logo-lg;
+$header-height-md: ($header-padding-top-y-md + $header-padding-bottom-y-md) +
+  $logo-sm;
+$header-height-sm: ($header-padding-top-y-sm + $header-padding-bottom-y-sm) +
+  $logo-sm;
+
+// Footer
+$footer-content-height-lg: 6rem;
+$footer-content-height-md: 5rem;
+$footer-content-height-sm: 4.8rem;
+
+$footer-padding-top-y-lg: 2rem;
+$footer-padding-top-y-md: 1.6rem;
+$footer-padding-top-y-sm: 1.2rem;
+$footer-padding-bottom-y-lg: 2rem;
+$footer-padding-bottom-y-md: 1.6rem;
+$footer-padding-bottom-y-sm: 1.2rem;
+
+$footer-padding-y-lg: $footer-padding-top-y-lg + $footer-padding-bottom-y-lg;
+$footer-padding-y-md: $footer-padding-top-y-md + $footer-padding-bottom-y-md;
+$footer-padding-y-sm: $footer-padding-top-y-sm + $footer-padding-bottom-y-sm;
+
+$footer-height-lg: (
+  $footer-padding-top-y-lg + $footer-padding-bottom-y-lg +
+    $footer-content-height-lg
+);
+
+$footer-height-lgsm: (
+  $footer-padding-top-y-md + $footer-padding-bottom-y-md +
+    $footer-content-height-lg
+);
+
+$footer-height-md: (
+  $footer-padding-top-y-md + $footer-padding-bottom-y-md +
+    $footer-content-height-md
+);
+$footer-height-sm: $footer-padding-y-sm + $footer-content-height-sm;
+
+// File Header
+$file-header-lg: 1.4rem;
+$file-header-md: 1.6rem;
+$file-header-sm: 1rem;

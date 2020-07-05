@@ -1,0 +1,30 @@
+# IDE configurations
+.idea/
+.vscode/
+
+# local configuration
+/.cache
+/.env
+docker-compose.yml
+src/*.local
+yarn.lock
+
+# Build folders
+/node_modules
+/build
+/public
+
+# testing
+eslint.xml
+src/pages/custom/
+
+# errors
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# monitoring
+logs/*
+
+# CSS
+*.css
