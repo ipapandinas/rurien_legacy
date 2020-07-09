@@ -1,3 +1,7 @@
-// PressStart2P
+// Poppins
 
-@include font-face($pressStart, 'PressStart2P', 'Regular');
+@include font-face($poppins, 'Poppins', 'Regular');
+@include font-face($poppinsBold, 'Poppins', 'Bold');
+@include font-face($poppinsBoldItalic, 'Poppins', 'BoldItalic');
+@include font-face($poppinsItalic, 'Poppins', 'Italic');
+@include font-face($poppinsSemiBold, 'Poppins', 'SemiBold');

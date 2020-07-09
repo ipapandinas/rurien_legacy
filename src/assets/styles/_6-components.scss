@@ -24,3 +24,27 @@
     transition: all 1s ease-in-out;
   }
 }
+
+.Chevron {
+  position: relative;
+  display: block;
+  height: 1rem; /*height should be double border*/
+  transition: transform $transition-duration-medium ease;
+}
+.Chevron::before,
+.Chevron::after {
+  position: absolute;
+  display: block;
+  content: '';
+  border: 1rem solid transparent; /*adjust size*/
+}
+/*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
+.Chevron::before {
+  right: -1rem;
+  border-top-color: $black; /*Chevron Color*/
+}
+.Chevron::after {
+  top: -0.5rem; /*adjust thickness*/
+  right: -1rem;
+  border-top-color: $white; /*Match background colour*/
+}

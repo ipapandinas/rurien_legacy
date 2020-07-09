@@ -1,6 +1,10 @@
 // Fonts
-$pressStartFontName: 'PressStart2P';
-$pressStart: $pressStartFontName;
+$poppinsFontName: 'Poppins';
+$poppins: $poppinsFontName;
+$poppinsBold: 'Poppins-Bold';
+$poppinsBoldItalic: 'Poppins-BoldItalic';
+$poppinsItalic: 'Poppins-Italic';
+$poppinsSemiBold: 'Poppins-SemiBold';
 
 // Weight
 $bold: 600;
@@ -8,17 +12,11 @@ $bold: 600;
 //---------- Colors ----------//
 // stylelint-disable color-no-hex
 // Primary
-$green: #56e959;
-$light-blue: #65ccf5;
-$light-red: #b84946;
-$light-yellow: #fae43d;
-$marine-blue: #173568;
-$orange: #ff5500;
-$salmon-pink: #e59fa2;
-
-// Secondary
-
-// Semantic
+$light-yellow: #F2D64B;
+$grey-blue: #274259;
+$marine-blue: #2A558C;
+$electric-blue: #4E94BF;
+$azur-blue: #5FB6D9;
 
 // Neutral
 $cream-white: #eeecec;
@@ -27,7 +25,7 @@ $light-grey: #dbdbdb;
 $neutral-black: #1b1b1b;
 $neutral-grey: #8d8c91;
 $neutral-light-grey: #999999;
-$neutral-white: #f7f7f7;
+$neutral-white: #F2F2F2;
 
 $black: #000000;
 $white: #ffffff;
@@ -63,11 +61,11 @@ $page-margin-y-lg: 4.4rem;
 $page-margin-y-md: 3.2rem;
 $page-margin-y-sm: 2rem;
 
-$block-margin-x-lg: 12rem;
+$block-margin-x-lg: 4.8rem;
 $block-margin-x-md: 6.4rem;
 $block-margin-x-sm: 4rem;
 
-$block-margin-y-lg: 2rem;
+$block-margin-y-lg: 3.2rem;
 $block-margin-y-md: 3.2rem;
 $block-margin-y-sm: 2rem;
 
