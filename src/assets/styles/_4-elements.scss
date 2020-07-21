@@ -22,58 +22,9 @@ body {
   height: 100vh;
 }
 
-header {
-  position: fixed;
-  background: $white;
-  width: 100%;
-  z-index: 2;
-
-  @include desktop {
-    padding: $header-padding-top-y-lg $page-margin-x-md
-      $header-padding-bottom-y-lg;
-    max-width: $four_sixth;
-    margin: 0 $one_sixth;
-  }
-
-  @include tablet {
-    padding: $header-padding-top-y-md $page-margin-x-md
-      $header-padding-bottom-y-md;
-  }
-
-  @include mobile {
-    padding: $header-padding-top-y-sm $page-margin-x-sm
-      $header-padding-bottom-y-sm;
-  }
-}
-
 main {
   width: 100%;
-  min-height: calc(100vh - #{$header-height-sm});
-  position: relative;
-  top: $header-height-sm;
-  padding: 0 0 $footer-height-sm;
-
-  @include desktop {
-    display: flex;
-    max-width: $four_sixth;
-    min-height: calc(100vh - #{$header-height-lg});
-    top: $header-height-lg;
-
-    padding: 0 $page-margin-x-lg $footer-height-lg;
-    margin: 0 $one_sixth $block-margin-y-lg;
-  }
-
-  @include desktop-sm {
-    padding-bottom: $footer-height-lgsm;
-  }
-
-  @include tablet {
-    min-height: calc(100vh - #{$header-height-md});
-    top: $header-height-md;
-
-    padding-left: 0 $page-margin-x-md $footer-height-md;
-    margin-bottom: $block-margin-y-md;
-  }
+  height: 100%;
 }
 
 img {

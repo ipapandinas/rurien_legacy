@@ -1,11 +1,7 @@
 import React, { ReactNode } from 'react';
 
-import Resize from './1-Atoms/Resize/Resize';
-
-import Header from './header';
-
-import '../assets/styles/main.scss';
-import './layout.scss';
+import { Resize } from './1-Atoms';
+import { SideMenu } from './3-Blocks';
 
 interface Props {
   children: ReactNode;
@@ -14,10 +10,7 @@ interface Props {
 export default function Layout({ children }: Props) {
   return (
     <>
-      <header>
-        <Header siteTitle={'Header'} />
-      </header>
-
+      <SideMenu />
       <main>
         <div className="App__content">{children}</div>
         <Resize />
