@@ -2,11 +2,11 @@
 module.exports = {
   siteMetadata: {
     author: `@mrtelmo`,
-    description: `Mister Telmo WEB Starter.`,
+    description: `Fuensanta R. Urien portfolio - Artist painter`,
     image: '/icon.png',
-    title: `Mister Telmo`,
-    titleTemplate: '%s | Mister Telmo',
-    url: 'https://www.mrtelmo.com',
+    title: `Fuensanta R. Urien`,
+    titleTemplate: '%s | R. Urien Art',
+    url: 'https://www.fuensantarurien.com/',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,19 +23,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Mister Telmo Web Invasion Exp.`,
-        short_name: `Mister Telmo`,
+        name: `Fuensanta R. Urien - Artist painter`,
+        short_name: `Fuensanta R. Urien`,
         start_url: `/`,
-        description: `The application does cool things and makes your life better.`,
-        lang: `fr`,
-        background_color: `#f9d649`,
+        description: `Fuensanta R. Urien portfolio - Artist painter`,
+        lang: `es`,
+        background_color: `#585b5a`,
         theme_color: `#fff`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
         icons: [
           {
             src: `/icon.png`,
-            sizes: `512x512`,
+            sizes: `144x144`,
             type: `image/png`,
           },
         ],
