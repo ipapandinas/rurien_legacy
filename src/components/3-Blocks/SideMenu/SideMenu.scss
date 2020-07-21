@@ -1,0 +1,136 @@
+@import '../../../assets/styles/main.scss';
+
+.SideMenu {
+  height: 100%;
+  width: $sidemenu-width-lg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, $grey-blue, $marine-blue);
+  color: $neutral-white;
+  display: flex;
+  justify-content: space-between;
+  padding: $block-margin-y-lg 0 $block-margin-y-lg $block-margin-y-lg;
+  z-index: 1000;
+  transition: transform $transition-duration-medium ease;
+
+  &.collapse {
+    transform: translateX(calc(#{$block-margin-x-lg} - #{$sidemenu-width-lg}));
+
+    .Chevron {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      transform: rotate(270deg);
+    }
+  }
+
+  &:not(.collapse) {
+    .Chevron {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+
+      &::after {
+        top: 0.5rem;
+      }
+
+      &::before {
+        top: 1rem;
+      }
+    }
+  }
+}
+
+.SideMenu__body {
+  position: relative;
+  width: calc(
+    #{$sidemenu-width-lg} - #{$block-margin-x-lg} - #{$block-margin-y-lg}
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.SideMenu__side {
+  width: $block-margin-x-lg;
+  display: flex;
+  align-items: center;
+  color: $white;
+  font-size: 1.6rem;
+
+  &.collapse {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.SideMenu__action {
+  background: none;
+  border: none;
+}
+
+.SideMenu__tag {
+  position: absolute;
+  top: 0;
+  font-size: 3.2rem;
+  text-decoration: none;
+  color: $white;
+
+  &.short {
+    position: relative;
+    font-size: 1.6rem;
+    font-family: $poppinsSemiBold;
+  }
+}
+
+.SideMenu__menu {
+  display: flex;
+  flex-direction: column;
+  font-family: $poppinsSemiBold;
+}
+
+.SideMenu__link {
+  font-size: 4.8rem;
+  text-decoration: none;
+  color: $white;
+}
+
+.SideMenu__footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Footer__left {
+  text-decoration: none;
+  color: $white;
+}
+
+.Footer__link {
+  color: $white;
+  text-decoration: none;
+  margin: 0 1rem;
+
+  &.short {
+    margin: 0 0.2rem;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.Footer__socials--short {
+  display: flex;
+  text-decoration: none;
+}
