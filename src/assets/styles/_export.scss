@@ -7,4 +7,18 @@
   BREAKPOINT_MD: $breakpoint-md-max;
   BREAKPOINT_SM: $breakpoint-sm-max;
   BREAKPOINT_XS: $breakpoint-xs-max;
+
+  // COLORS
+  COLOR_GREY_BLUE: $grey-blue;
+  COLOR_MARINE_BLUE: $marine-blue;
+
+  // FONTS
+  FONT_POPPINS: $poppins;
+  FONT_POPPINS_BOLD: $poppinsBold;
+  FONT_POPPINS_BOLD_ITALIC: $poppinsBoldItalic;
+  FONT_POPPINS_ITALIC: $poppinsItalic;
+  FONT_POPPINS_SEMI_BOLD: $poppinsSemiBold;
+
+  // HEADER
+  WORK_PAGE_HEADER_HEIGHT: $work-page-header-height / 1rem;
 }
