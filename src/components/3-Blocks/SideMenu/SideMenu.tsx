@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import classnames from 'classnames';
 import { Link } from 'gatsby';
 
-import './SideMenu.scss';
-
 export default function SideMenu() {
   const [collapse, toggleCollapse] = useState(false);
 

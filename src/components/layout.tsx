@@ -3,6 +3,8 @@ import React, { ReactNode } from 'react';
 import { Resize } from './1-Atoms';
 import { SideMenu } from './3-Blocks';
 
+import '../assets/styles/main.scss';
+
 interface Props {
   children: ReactNode;
 }
