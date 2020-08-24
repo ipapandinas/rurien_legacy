@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'http://localhost:1337',
+        apiURL: 'http://mgmt.fuensantarurien.com',
         contentTypes: ['obras', 'categorias'],
         singleTypes: ['expos', 'sobre-mi'],
         queryLimit: 1000,
