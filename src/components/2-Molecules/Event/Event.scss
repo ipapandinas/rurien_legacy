@@ -1,0 +1,69 @@
+.Event {
+  height: 32rem;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to bottom right, $cream-white, $neutral-white);
+  border-radius: $block-border-radius;
+  overflow: hidden;
+  box-shadow: $default-box-shadow;
+}
+
+.Event__content {
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.Event__image {
+  width: $one_third;
+  display: flex;
+}
+
+.Event__title {
+  font-family: $poppinsSemiBold;
+  font-size: 2.4rem;
+  margin: 0 0 1.6rem;
+}
+
+.Event__description {
+  margin: 0 0 1.6rem;
+}
+
+.Event__contentBottom {
+  display: flex;
+  justify-content: flex-end;
+
+  > * {
+    &:first-child {
+      margin-right: 2.4rem;
+    }
+  }
+}
+
+.Event__iconLabel {
+  display: flex;
+  align-items: baseline;
+
+  > * {
+    &:first-child {
+      margin-right: 0.8rem;
+    }
+  }
+}
+
+@include mobile {
+  .Event {
+    border-radius: 0;
+  }
+
+  .Event__content {
+    max-width: 100%;
+    padding: 2rem 2rem;
+  }
+
+  .Event__image {
+    display: none;
+  }
+}

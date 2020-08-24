@@ -5,6 +5,7 @@ $poppinsBold: 'Poppins-Bold';
 $poppinsBoldItalic: 'Poppins-BoldItalic';
 $poppinsItalic: 'Poppins-Italic';
 $poppinsSemiBold: 'Poppins-SemiBold';
+$poppinsSemiBoldItalic: 'Poppins-SemiBoldItalic';
 
 // Weight
 $bold: 600;
@@ -39,10 +40,16 @@ $breakpoint-xl-min: 1280px;
 $breakpoint-xxl-min: 1440px;
 
 $breakpoint-xs-max: $breakpoint-sm-min - 1;
-$breakpoint-sm-max: $breakpoint-md-min - 1;
+$breakpoint-sm-max: $breakpoint-md-min;
 $breakpoint-md-max: $breakpoint-lg-min - 1;
 $breakpoint-lg-max: $breakpoint-xl-min - 1;
 $breakpoint-xl-max: $breakpoint-xxl-min - 1;
+
+// Shadows
+$default-shadow-color: $marine-blue;
+$default-shadow: rgba($default-shadow-color, 0.1);
+$default-box-shadow: 0 4px 15px 0 $default-shadow;
+$default-hover-box-shadow: 0 8px 28px 0 rgba($default-shadow-color, 0.2); 
 
 // Transitions
 $transition-duration-fast: 0.25s;
@@ -57,17 +64,21 @@ $page-margin-x-lg: 6rem;
 $page-margin-x-md: 3.2rem;
 $page-margin-x-sm: 2rem;
 
-$page-margin-y-lg: 4.4rem;
+$page-margin-y-lg: 7rem;
 $page-margin-y-md: 3.2rem;
 $page-margin-y-sm: 2rem;
 
 $block-margin-x-lg: 4.8rem;
-$block-margin-x-md: 6.4rem;
-$block-margin-x-sm: 4rem;
+$block-margin-x-md: 3.8rem;
+$block-margin-x-sm: 3.8rem;
 
-$block-margin-y-lg: 3.2rem;
+$block-margin-y-lg: 4.8rem;
 $block-margin-y-md: 3.2rem;
 $block-margin-y-sm: 2rem;
+
+$block-border-radius: 1rem;
+$block-border-radius-lg: 1.6rem;
+$block-border-radius-sm: 0.3rem;
 
 // Sizes
 $one_sixth: 16.667%;
@@ -77,7 +88,15 @@ $one_half: 50%;
 $four_sixth: 66.667%;
 
 // Header
-$work-page-header-height: 7rem;
+$work-page-header-height: $page-margin-y-lg;
 
 // SideMenu
 $sidemenu-width-lg: 48rem;
+$sidemenu-width-sm: 100%;
+
+$sideblock-padding-y-lg: 3.2rem;
+
+// SlickSlider
+$work-slider-height-sm: 45.5rem;
+$work-slider-width: 50rem;
+$work-slider-width-sm: 30rem;

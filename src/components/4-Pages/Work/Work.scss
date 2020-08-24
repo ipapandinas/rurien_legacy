@@ -1,0 +1,31 @@
+.Work, .Work__content {
+  height: 100%;
+}
+
+.Work__header {
+  height: $work-page-header-height;
+  width: 100%;
+  border-bottom: solid $neutral-black;
+  position: fixed;
+  background-color: $cream-white;
+  z-index: 10;
+
+  .Filters {
+    width: 23rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: $poppinsSemiBold;
+    padding: 1.3rem 0 0;
+  }
+}
+
+.Work__content {
+  padding-top: $work-page-header-height;
+}
+
+@include mobileTablet {
+  .Work__content {
+    height: calc(100% - #{$work-page-header-height * 2});
+  }
+}

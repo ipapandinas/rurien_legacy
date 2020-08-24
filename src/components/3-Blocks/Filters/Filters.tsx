@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent } from 'react';
 import {
   FormControl,
   MenuItem,
@@ -9,7 +9,13 @@ import {
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import { COLOR_GREY_BLUE, FONT_POPPINS_SEMI_BOLD } from '../../../settings';
+import { useCategoriesQuery } from '../../../queries';
+import {
+  ALL_CATEGORIES,
+  ALL_YEARS,
+  COLOR_MARINE_BLUE,
+  FONT_POPPINS_SEMI_BOLD,
+} from '../../../settings';
 
 const SELECT_CATEGORY_TYPE = 'SELECT_CATEGORY_TYPE';
 const SELECT_YEAR_TYPE = 'SELECT_YEAR_TYPE';
@@ -18,11 +24,11 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     formControlCategory: {
       margin: theme.spacing(1),
-      minWidth: 100,
+      minWidth: '12rem',
     },
     formControlYear: {
       margin: theme.spacing(1),
-      minWidth: 70,
+      minWidth: '7rem',
     },
     icon: {
       color: 'black',
@@ -44,16 +50,16 @@ const useStyles = makeStyles((theme: Theme) =>
         paddingBottom: 12,
       },
       '& li:hover': {
-        background: COLOR_GREY_BLUE,
+        background: COLOR_MARINE_BLUE,
         color: 'white',
       },
       '& li.Mui-selected': {
         color: 'white',
-        background: COLOR_GREY_BLUE,
+        background: COLOR_MARINE_BLUE,
         fontFamily: FONT_POPPINS_SEMI_BOLD,
       },
       '& li.Mui-selected:hover': {
-        background: COLOR_GREY_BLUE,
+        background: COLOR_MARINE_BLUE,
         color: 'white',
       },
     },
@@ -64,7 +70,7 @@ const useSelectStyles = (variant: string) => {
   const classes = makeStyles(() =>
     createStyles({
       select: {
-        minWidth: variant === SELECT_CATEGORY_TYPE ? 100 : 60,
+        minWidth: variant === SELECT_CATEGORY_TYPE ? '12rem' : '7rem',
         fontFamily: FONT_POPPINS_SEMI_BOLD,
         fontSize: '1.6rem',
         borderStyle: 'none',
@@ -77,20 +83,28 @@ const useSelectStyles = (variant: string) => {
   return classes().select;
 };
 
-export default function Filters() {
+interface Category {
+  nombre: string;
+  strapiId: number;
+}
+
+interface Props {
+  category: number;
+  handleCategoryChange: (event: ChangeEvent<{ value: unknown }>) => void;
+  handleYearChange: (event: ChangeEvent<{ value: unknown }>) => void;
+  year: number;
+}
+
+export default function Filters({
+  category,
+  handleCategoryChange,
+  handleYearChange,
+  year,
+}: Props) {
+  const categories = useCategoriesQuery();
   const classes = useStyles();
   const categorySelectClasses = useSelectStyles(SELECT_CATEGORY_TYPE);
   const yearSelectClasses = useSelectStyles(SELECT_YEAR_TYPE);
-  const [category, setCategory] = useState('10');
-  const [year, setYear] = useState('10');
-
-  const handleCategoryChange = (event: ChangeEvent<{ value: unknown }>) => {
-    setCategory(event.target.value as string);
-  };
-
-  const handleYearChange = (event: ChangeEvent<{ value: unknown }>) => {
-    setYear(event.target.value as string);
-  };
 
   const iconComponent = () => {
     return <ExpandMoreIcon className={classes.icon} />;
@@ -125,9 +139,14 @@ export default function Filters() {
           value={category}
           onChange={handleCategoryChange}
         >
-          <MenuItem value={10}>MAR</MenuItem>
-          <MenuItem value={20}>TIERRA</MenuItem>
-          <MenuItem value={30}>ASFALTO</MenuItem>
+          <MenuItem value={0}>
+            <em>{ALL_CATEGORIES}</em>
+          </MenuItem>
+          {categories.map(({ nombre, strapiId }: Category) => (
+            <MenuItem key={strapiId} value={strapiId}>
+              {nombre}
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
 
@@ -142,9 +161,12 @@ export default function Filters() {
           value={year}
           onChange={handleYearChange}
         >
-          <MenuItem value={10}>2020</MenuItem>
-          <MenuItem value={20}>2019</MenuItem>
-          <MenuItem value={30}>2018</MenuItem>
+          <MenuItem value={0}>
+            <em>{ALL_YEARS}</em>
+          </MenuItem>
+          <MenuItem value={2020}>2020</MenuItem>
+          <MenuItem value={2019}>2019</MenuItem>
+          <MenuItem value={2018}>2018</MenuItem>
         </Select>
       </FormControl>
     </div>

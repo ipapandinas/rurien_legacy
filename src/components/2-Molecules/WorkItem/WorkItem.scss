@@ -1,0 +1,73 @@
+.WorkItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.WorkItem__info {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20rem;
+}
+
+.WorkItem__image {
+  width: $work-slider-width;
+  max-height: $work-slider-width;
+  max-width: $work-slider-width;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+.WorkItem__title {
+  font-family: $poppinsSemiBold;
+}
+
+.WorkItem__technicals {
+  display: flex;
+  width: 100%;
+  font-family: $poppinsItalic;
+  font-size: 1rem;
+}
+
+.WorkItem__technic {
+  margin-right: 1.6rem;
+}
+
+.WorkItem__category {
+  height: 2rem;
+  background: $marine-blue;
+  padding: 0.2rem 1.2rem 0.5rem;
+  border-radius: $block-border-radius-lg;
+  font-family: $poppinsSemiBold;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: $white;
+}
+
+@include mobileTablet {
+  .WorkItem__info {
+    width: $work-slider-width;
+    margin: 0 auto;
+    left: 0;
+    bottom: 5.6rem;
+  }
+}
+
+@include mobile {
+  .WorkItem__info {
+    bottom: 4rem;
+  }
+
+  // .WorkItem__image {
+  //   max-height: $work-slider-width-sm;
+  //   max-width: $work-slider-width-sm;
+  // }
+
+  .WorkItem__gatsbyImage {
+    max-height: 30rem;
+  }
+}

@@ -1,5 +1,20 @@
+// Atoms
+@import '../../components/1-Atoms/Item/Item.scss';
+
+// Molecules
+@import '../../components/2-Molecules/Event/Event.scss';
+@import '../../components/2-Molecules/List/List.scss';
+@import '../../components/2-Molecules/WorkItem/WorkItem.scss';
+
 // Blocks
+@import '../../components/3-Blocks/Events/Events.scss';
+@import '../../components/3-Blocks/Lists/Lists.scss';
 @import '../../components/3-Blocks/SideMenu/SideMenu.scss';
+@import '../../components/3-Blocks/Slickslider/Slickslider.scss';
 
 // Pages
+@import '../../components/4-Pages/About/About.scss';
+@import '../../components/4-Pages/Home/Home.scss';
 @import '../../components/4-Pages/Work/Work.scss';
+
+@import '../../components/layout.scss';

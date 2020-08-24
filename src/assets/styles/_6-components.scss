@@ -26,7 +26,7 @@
 }
 
 .Chevron {
-  position: relative;
+  position: absolute;
   display: block;
   height: 1rem; /*height should be double border*/
   transition: transform $transition-duration-medium ease;
@@ -40,11 +40,12 @@
 }
 /*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
 .Chevron::before {
-  right: -1rem;
+  top: 1rem;
+  right: -2rem;
   border-top-color: $black; /*Chevron Color*/
 }
 .Chevron::after {
-  top: -0.5rem; /*adjust thickness*/
-  right: -1rem;
+  top: 1.5rem; /*adjust thickness*/
+  right: -2rem;
   border-top-color: $white; /*Match background colour*/
 }

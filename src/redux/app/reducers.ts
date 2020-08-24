@@ -1,6 +1,11 @@
 import { getMediaInfo } from '../../services';
 
-import { APP_UPDATE_DEVICE, AppActionTypes, AppState } from './types';
+import {
+  APP_SIDEMENU_TOGGLE,
+  APP_UPDATE_DEVICE,
+  AppActionTypes,
+  AppState,
+} from './types';
 
 export const appDefaultState = {
   device: {
@@ -13,6 +18,7 @@ export const appDefaultState = {
     isTabletPortrait: false,
     isTabletLandscape: false,
   },
+  isSideMenuOpen: true,
 };
 
 export function appReducer(
@@ -20,6 +26,25 @@ export function appReducer(
   action: AppActionTypes
 ): AppState {
   switch (action.type) {
+    case APP_SIDEMENU_TOGGLE: {
+      const { value } = action;
+      const prevState = state;
+
+      console.log({ value });
+
+      if (value) {
+        return {
+          ...state,
+          isSideMenuOpen: value,
+        };
+      }
+
+      return {
+        ...state,
+        isSideMenuOpen: !prevState.isSideMenuOpen,
+      };
+    }
+
     case APP_UPDATE_DEVICE: {
       const { media } = action;
 

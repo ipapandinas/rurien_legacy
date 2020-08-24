@@ -1,0 +1,11 @@
+.App__content {
+  height: 100%;
+
+  > * {
+    margin-left: $block-margin-x-lg;
+
+    @include mobile {
+      margin-left: $block-margin-x-sm;
+    }
+  }
+}

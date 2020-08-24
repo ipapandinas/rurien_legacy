@@ -1,0 +1,12 @@
+.List {
+  width: 100%;
+  background: linear-gradient(to bottom right, $cream-white, $neutral-white);
+  padding: 1.6rem 2.4rem;
+  border: 0.1rem solid rgba($grey-blue, 0.1);
+  border-radius: $block-border-radius-sm;
+  box-shadow: $default-box-shadow;
+
+  h3 {
+    margin-top: 0;
+  }
+}

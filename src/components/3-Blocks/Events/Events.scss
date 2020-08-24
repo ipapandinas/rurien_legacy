@@ -1,0 +1,61 @@
+$gutter: 3.2rem;
+
+.Events {
+  padding: $page-margin-y-lg $page-margin-x-lg;
+}
+
+.Events__title {
+  margin-top: 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &::after {
+    margin-left: 2.4rem;
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 0.1rem;
+    background: linear-gradient(to right, rgba($black, 0.3), transparent 80%);
+  }
+}
+
+.Events__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 (-$gutter/2);
+
+  > * {
+    width: 50%;
+    padding: $gutter/2;
+
+    @include mobileTablet {
+      width: 100%;
+    }
+  }
+}
+
+@include mobileTablet {
+  .Events {
+    padding: $page-margin-x-lg $page-margin-x-lg;
+  }
+
+  .Events__list {
+    display: block;
+  }
+}
+
+@include mobile {
+  .Events {
+    padding: $sideblock-padding-y-lg 0;
+  }
+
+  .Events__title {
+    text-align: center;
+  
+    &::after {
+      content: none;
+    }
+  }
+}
