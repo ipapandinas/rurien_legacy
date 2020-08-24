@@ -28,6 +28,3 @@ logs/*
 
 # CSS
 *.css
-
-# Images
-/src/assets/images
