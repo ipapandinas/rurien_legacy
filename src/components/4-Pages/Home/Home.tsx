@@ -48,7 +48,7 @@ export default function Home() {
           <Item className="second" alt="urbano" filename="urbano.jpg" />
           <Item className="second" alt="baldosa" filename="baldosa.jpg" />
           <Item className="second" alt="ellas" filename="ellas.jpg" />
-          <Item className="second" alt="fueraMar" filename="fueraMar.jpg" />
+          <Item className="second" alt="inthesea" filename="intheseaVIII.png" />
           <Item className="second" alt="girl" filename="girl.jpg" />
         </div>
 
