@@ -2,6 +2,7 @@ import React from 'react';
 import Img, { FluidObject } from 'gatsby-image';
 
 import { useDevice } from '../../../hooks';
+import { categoryNameToValue } from '../../../services';
 import {
   WORK_SLIDER_HEIGHT_SM,
   WORK_SLIDER_WIDTH,
@@ -25,13 +26,15 @@ export type WorkItemInterface = {
 };
 
 interface Props {
+  category: number;
+  setCategory: (category: number) => void;
   work: WorkItemInterface;
 }
 
-export default function WorkItem({ work }: Props) {
+export default function WorkItem({ category, setCategory, work }: Props) {
   const {
     ano: year,
-    categoria: category,
+    categoria: strapiCategory,
     dimension: size,
     obra: media,
     tecnica: technic,
@@ -49,6 +52,9 @@ export default function WorkItem({ work }: Props) {
     height: ratio >= 1 ? `${height}px` : `${sliderHeight}px`,
     width: ratio <= 1 ? `${width}px` : `${sliderWidth}px`,
   };
+
+  const categoryName =
+    strapiCategory && strapiCategory.nombre.toLocaleUpperCase();
 
   return (
     <div className="WorkItem">
@@ -71,10 +77,14 @@ export default function WorkItem({ work }: Props) {
             {size && <div className="WorkItem__size">{size}</div>}
           </div>
         </div>
-        {category && category.nombre && (
-          <div className="WorkItem__category">
-            {category.nombre.toLocaleUpperCase()}
-          </div>
+        {categoryName && category === 0 && (
+          <button
+            className="WorkItem__category"
+            type="button"
+            onClick={() => setCategory(categoryNameToValue(categoryName))}
+          >
+            {categoryName}
+          </button>
         )}
       </div>
     </div>

@@ -10,6 +10,7 @@ import {
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { useCategoriesQuery } from '../../../queries';
+import { categoryNameToValue } from '../../../services';
 import {
   ALL_CATEGORIES,
   ALL_YEARS,
@@ -143,7 +144,10 @@ export default function Filters({
             <em>{ALL_CATEGORIES}</em>
           </MenuItem>
           {categories.map(({ nombre, strapiId }: Category) => (
-            <MenuItem key={strapiId} value={strapiId}>
+            <MenuItem
+              key={strapiId}
+              value={categoryNameToValue(nombre.toLocaleUpperCase())}
+            >
               {nombre}
             </MenuItem>
           ))}

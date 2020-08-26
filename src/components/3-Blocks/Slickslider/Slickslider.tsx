@@ -2,18 +2,24 @@ import React from 'react';
 import Slider from 'react-slick';
 import Img from 'gatsby-image';
 
-import { categoryMapping } from '../../../services';
+import { categoryValueToName } from '../../../services';
 import { ALL_CATEGORIES } from '../../../settings';
 
 import { WorkItem, WorkItemInterface } from '../../2-Molecules';
 
 interface Props {
   category: number;
+  setCategory: (category: number) => void;
   works: Array<WorkItemInterface>;
   year: number;
 }
 
-export default function Slickslider({ category, works, year }: Props) {
+export default function Slickslider({
+  category,
+  setCategory,
+  works,
+  year,
+}: Props) {
   const settings = {
     // eslint-disable-next-line react/display-name
     customPaging: function (i: number) {
@@ -44,13 +50,13 @@ export default function Slickslider({ category, works, year }: Props) {
   };
 
   const dynamicTitle = () => {
-    if (categoryMapping(category) === ALL_CATEGORIES && year === 0) {
+    if (categoryValueToName(category) === ALL_CATEGORIES && year === 0) {
       return '';
-    } else if (categoryMapping(category) !== ALL_CATEGORIES && year === 0) {
+    } else if (categoryValueToName(category) !== ALL_CATEGORIES && year === 0) {
       return (
-        <span className="Title__category">{categoryMapping(category)}</span>
+        <span className="Title__category">{categoryValueToName(category)}</span>
       );
-    } else if (categoryMapping(category) === ALL_CATEGORIES && year !== 0) {
+    } else if (categoryValueToName(category) === ALL_CATEGORIES && year !== 0) {
       return (
         <span>
           Obras de <span className="Title__year">{year}</span>
@@ -60,8 +66,8 @@ export default function Slickslider({ category, works, year }: Props) {
 
     return (
       <span>
-        <span className="Title__category">{categoryMapping(category)}</span> de{' '}
-        <span className="Title__year">{year}</span>
+        <span className="Title__category">{categoryValueToName(category)}</span>{' '}
+        de <span className="Title__year">{year}</span>
       </span>
     );
   };
@@ -71,14 +77,17 @@ export default function Slickslider({ category, works, year }: Props) {
       ? 'Ninguna obra corresponde a tu criterio'
       : dynamicTitle();
 
-  categoryMapping(category);
-
   return (
     <div className="Slickslider">
       <h2 className="Slickslider__title">{title}</h2>
       <Slider {...settings}>
         {works.map((work, idx) => (
-          <WorkItem work={work} key={idx} />
+          <WorkItem
+            key={idx}
+            category={category}
+            setCategory={setCategory}
+            work={work}
+          />
         ))}
       </Slider>
     </div>

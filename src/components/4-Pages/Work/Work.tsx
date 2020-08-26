@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useMemo, useState } from 'react';
 
 import { useWorkQuery } from '../../../queries';
-import { categoryMapping } from '../../../services';
+import { categoryValueToName } from '../../../services';
 import { ALL_CATEGORIES } from '../../../settings';
 
 import { Filters, Slickslider } from '../../3-Blocks';
@@ -30,8 +30,8 @@ export default function Work() {
       work.reverse().filter(({ categoria, ano: yearType }: Work) => {
         const { nombre: categoryType } = categoria;
         return (
-          (categoryMapping(category) === categoryType.toLocaleUpperCase() ||
-            categoryMapping(category) === ALL_CATEGORIES) &&
+          (categoryValueToName(category) === categoryType.toLocaleUpperCase() ||
+            categoryValueToName(category) === ALL_CATEGORIES) &&
           (year === Number(yearType) || year === 0)
         );
       }),
@@ -49,7 +49,12 @@ export default function Work() {
         />
       </div>
       <div className="Work__content">
-        <Slickslider category={category} works={imagesFiltered} year={year} />
+        <Slickslider
+          category={category}
+          setCategory={setCategory}
+          works={imagesFiltered}
+          year={year}
+        />
       </div>
     </div>
   );
