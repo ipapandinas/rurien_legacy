@@ -28,7 +28,16 @@ export default function Work() {
   const imagesFiltered = useMemo(
     () =>
       work.reverse().filter(({ categoria, ano: yearType }: Work) => {
+        if (!categoria) {
+          return null;
+        }
+
         const { nombre: categoryType } = categoria;
+
+        if (!categoryType) {
+          return null;
+        }
+
         return (
           (categoryValueToName(category) === categoryType.toLocaleUpperCase() ||
             categoryValueToName(category) === ALL_CATEGORIES) &&
