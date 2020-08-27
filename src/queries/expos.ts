@@ -8,6 +8,7 @@ export const useExposQuery = () => {
           collectivas
           individuales
           principales {
+            actual
             detalle
             fecha
             id

@@ -6,6 +6,10 @@
   border-radius: $block-border-radius;
   overflow: hidden;
   box-shadow: $default-box-shadow;
+
+  &--current {
+    box-shadow: $default-current-box-shadow;
+  }
 }
 
 .Event__content {
@@ -14,6 +18,12 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem 4rem;
+}
+
+.Event__date {
+  &--current {
+    font-family: $poppinsBold;
+  }
 }
 
 .Event__image {

@@ -48,8 +48,11 @@ $breakpoint-xl-max: $breakpoint-xxl-min - 1;
 // Shadows
 $default-shadow-color: $marine-blue;
 $default-shadow: rgba($default-shadow-color, 0.1);
+$default-current-shadow: rgba($default-shadow-color, 0.9);
+
 $default-box-shadow: 0 4px 15px 0 $default-shadow;
-$default-hover-box-shadow: 0 8px 28px 0 rgba($default-shadow-color, 0.2); 
+$default-hover-box-shadow: 0 8px 28px 0 rgba($default-shadow-color, 0.2);
+$default-current-box-shadow: 0 8px 28px 0 $default-current-shadow; 
 
 // Transitions
 $transition-duration-fast: 0.25s;

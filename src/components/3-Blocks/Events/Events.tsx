@@ -4,6 +4,7 @@ import { FluidObject } from 'gatsby-image';
 import { Event } from '../../2-Molecules';
 
 interface SingleEvent {
+  actual: boolean;
   cartel: {
     childImageSharp: {
       fluid: FluidObject;
@@ -28,6 +29,7 @@ export default function Events({ events, title }: Props) {
       <div className="Events__list">
         {events.map(
           ({
+            actual: current,
             cartel: image,
             detalle: description,
             fecha: date,
@@ -37,6 +39,7 @@ export default function Events({ events, title }: Props) {
           }) => (
             <div key={id}>
               <Event
+                current={current}
                 date={date}
                 description={description}
                 image={image}

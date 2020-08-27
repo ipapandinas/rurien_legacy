@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -6,6 +7,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import Img, { FluidObject } from 'gatsby-image';
 
 interface Props {
+  current: boolean;
   date: string;
   description: string;
   image: {
@@ -18,6 +20,7 @@ interface Props {
 }
 
 export default function Event({
+  current,
   date,
   description,
   image,
@@ -25,7 +28,7 @@ export default function Event({
   title,
 }: Props) {
   return (
-    <div className="Event">
+    <div className={classnames('Event', { ['Event--current']: current })}>
       <div className="Event__content">
         {title && <div className="Event__title">{title}</div>}
         {description && <div className="Event__description">{description}</div>}
@@ -33,7 +36,13 @@ export default function Event({
           {date && (
             <div className="Event__iconLabel">
               <FontAwesomeIcon icon={faCalendarAlt} />
-              <div className="Event__date">{date}</div>
+              <div
+                className={classnames('Event__date', {
+                  ['Event__date--current']: current,
+                })}
+              >
+                {date}
+              </div>
             </div>
           )}
           {location && (
