@@ -32,6 +32,12 @@
   }
 }
 
+@mixin not-desktop() {
+  @media (max-width: $breakpoint-md-max) {
+    @content;
+  }
+}
+
 @mixin tablet-landscape() {
   @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-md-max) {
     @content;

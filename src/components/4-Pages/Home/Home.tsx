@@ -11,7 +11,7 @@ export default function Home() {
       <div className="Home fade-in">
         <div className="Home__infinite">
           <div className="Home__line">
-            <Item className="mobile" alt="monos" filename="artxaH150.jpeg" />
+            <Item className="mobile" alt="azul" filename="azul.jpg" />
           </div>
         </div>
 

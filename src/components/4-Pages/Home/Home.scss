@@ -3,6 +3,7 @@
   width: calc(100% - #{$block-margin-x-lg});
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .Home__infinite {

@@ -19,7 +19,6 @@ export default function SideMenu() {
             className={classnames('SideMenu__tag', { collapse: !isOpen })}
             title="Home"
             to="/"
-            onClick={() => dispatch(appSideMenuToggle(false))}
           >
             Fuensanta <br /> R. Urien
           </Link>
