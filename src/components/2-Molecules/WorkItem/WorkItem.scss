@@ -51,10 +51,14 @@
 
 @include mobileTablet {
   .WorkItem__info {
-    width: $work-slider-width;
+    width: 95%;
     margin: 0 auto;
     left: 0;
     bottom: 5.6rem;
+  }
+
+  .WorkItem__category {
+    margin: 0 0 0 2rem;
   }
 }
 
