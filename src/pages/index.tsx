@@ -13,7 +13,6 @@ export default function IndexPage() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log({ isLaptop });
     dispatch(appSideMenuToggle(isLaptop));
   }, [dispatch, isLaptop]);
 

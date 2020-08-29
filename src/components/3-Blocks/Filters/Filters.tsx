@@ -25,15 +25,15 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     formControlCategory: {
       margin: theme.spacing(1),
-      minWidth: '12rem',
+      minWidth: '13rem',
     },
     formControlYear: {
       margin: theme.spacing(1),
-      minWidth: '7rem',
+      minWidth: '9rem',
     },
     icon: {
       color: 'black',
-      right: 7,
+      right: 3,
       position: 'absolute',
       userSelect: 'none',
       pointerEvents: 'none',
@@ -71,11 +71,12 @@ const useSelectStyles = (variant: string) => {
   const classes = makeStyles(() =>
     createStyles({
       select: {
-        minWidth: variant === SELECT_CATEGORY_TYPE ? '12rem' : '7rem',
+        minWidth: variant === SELECT_CATEGORY_TYPE ? '13rem' : '9rem',
         fontFamily: FONT_POPPINS_SEMI_BOLD,
         fontSize: '1.6rem',
         borderStyle: 'none',
         paddingTop: '1.6rem',
+        paddingLeft: '1rem',
         paddingRight: '0 !important',
       },
     })
@@ -170,7 +171,8 @@ export default function Filters({
           </MenuItem>
           <MenuItem value={2020}>2020</MenuItem>
           <MenuItem value={2019}>2019</MenuItem>
-          <MenuItem value={2018}>2018</MenuItem>
+          <MenuItem value={201718}>2017 /18</MenuItem>
+          <MenuItem value={200916}>2009 /16</MenuItem>
         </Select>
       </FormControl>
     </div>

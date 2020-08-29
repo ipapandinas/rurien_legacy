@@ -22,6 +22,12 @@
   z-index: 1000;
 }
 
+.WorkItem__content {
+  > :not(:last-child) {
+    margin-bottom: 0.4rem;
+  }
+}
+
 .WorkItem__title {
   font-family: $poppinsSemiBold;
 }
@@ -35,6 +41,7 @@
 
 .WorkItem__technic {
   margin-right: 1.6rem;
+  flex: 1;
 }
 
 .WorkItem__category {

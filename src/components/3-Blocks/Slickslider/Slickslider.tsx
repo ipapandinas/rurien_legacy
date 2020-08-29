@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import Img from 'gatsby-image';
 
-import { categoryValueToName } from '../../../services';
+import { categoryValueToName, yearDecode } from '../../../services';
 import { ALL_CATEGORIES } from '../../../settings';
 
 import { WorkItem, WorkItemInterface } from '../../2-Molecules';
@@ -59,7 +59,7 @@ export default function Slickslider({
     } else if (categoryValueToName(category) === ALL_CATEGORIES && year !== 0) {
       return (
         <span>
-          Obras de <span className="Title__year">{year}</span>
+          Obras de <span className="Title__year">{yearDecode(year)}</span>
         </span>
       );
     }
@@ -67,7 +67,7 @@ export default function Slickslider({
     return (
       <span>
         <span className="Title__category">{categoryValueToName(category)}</span>{' '}
-        de <span className="Title__year">{year}</span>
+        de <span className="Title__year">{yearDecode(year)}</span>
       </span>
     );
   };

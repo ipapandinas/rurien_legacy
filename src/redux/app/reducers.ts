@@ -30,8 +30,6 @@ export function appReducer(
       const { value } = action;
       const prevState = state;
 
-      console.log({ value });
-
       if (value) {
         return {
           ...state,

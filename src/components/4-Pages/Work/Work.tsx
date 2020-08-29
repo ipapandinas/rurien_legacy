@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useMemo, useState } from 'react';
 
 import { useWorkQuery } from '../../../queries';
-import { categoryValueToName } from '../../../services';
+import { categoryValueToName, yearMapping } from '../../../services';
 import { ALL_CATEGORIES } from '../../../settings';
 
 import { Filters, Slickslider } from '../../3-Blocks';
@@ -27,23 +27,27 @@ export default function Work() {
 
   const imagesFiltered = useMemo(
     () =>
-      work.reverse().filter(({ categoria, ano: yearType }: Work) => {
-        if (!categoria) {
-          return null;
-        }
+      work
+        .slice()
+        .reverse()
+        .filter(({ categoria, ano: yearType }: Work) => {
+          if (!categoria) {
+            return null;
+          }
 
-        const { nombre: categoryType } = categoria;
+          const { nombre: categoryType } = categoria;
 
-        if (!categoryType) {
-          return null;
-        }
+          if (!categoryType) {
+            return null;
+          }
 
-        return (
-          (categoryValueToName(category) === categoryType.toLocaleUpperCase() ||
-            categoryValueToName(category) === ALL_CATEGORIES) &&
-          (year === Number(yearType) || year === 0)
-        );
-      }),
+          return (
+            (categoryValueToName(category) ===
+              categoryType.toLocaleUpperCase() ||
+              categoryValueToName(category) === ALL_CATEGORIES) &&
+            (year === yearMapping(yearType) || year === 0)
+          );
+        }),
     [category, year]
   );
 
