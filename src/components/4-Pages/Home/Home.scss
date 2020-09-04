@@ -61,6 +61,11 @@
 @include mobile {
   .Home {
     width: calc(100% - #{$block-margin-x-sm});
+    justify-content: flex-start;
+  }
+
+  .Home__infinite {
+    height: 80%;
   }
 
   .Home__line {
