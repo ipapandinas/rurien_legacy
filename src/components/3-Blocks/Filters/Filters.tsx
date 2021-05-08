@@ -169,9 +169,9 @@ export default function Filters({
           <MenuItem value={0}>
             <em>{ALL_YEARS}</em>
           </MenuItem>
+          <MenuItem value={2021}>2021</MenuItem>
           <MenuItem value={2020}>2020</MenuItem>
-          <MenuItem value={2019}>2019</MenuItem>
-          <MenuItem value={201718}>2017 /18</MenuItem>
+          <MenuItem value={201719}>2017 /19</MenuItem>
           <MenuItem value={200916}>2009 /16</MenuItem>
         </Select>
       </FormControl>
