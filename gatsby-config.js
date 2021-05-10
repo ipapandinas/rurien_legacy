@@ -1,4 +1,8 @@
 /* eslint-disable @typescript-eslint/camelcase */
+require('dotenv').config({
+  path: `./.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     author: `@mrtelmo`,
@@ -21,7 +25,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'http://mgmt.fuensantarurien.com',
+        apiURL: process.env.GATSBY_API_URL,
         contentTypes: ['obras', 'categorias'],
         singleTypes: ['expos', 'sobre-mi'],
         queryLimit: 1000,
