@@ -56,6 +56,17 @@ export default function WorkItem({ category, setCategory, work }: Props) {
   const categoryName =
     strapiCategory && strapiCategory.nombre.toLocaleUpperCase();
 
+  const isCategoryChip = categoryName && category === 0;
+  const CategoryChip = () => (
+    <button
+      className="WorkItem__category"
+      type="button"
+      onClick={() => setCategory(categoryNameToValue(categoryName))}
+    >
+      {categoryName}
+    </button>
+  );
+
   return (
     <div className="WorkItem">
       {media && (
@@ -69,6 +80,7 @@ export default function WorkItem({ category, setCategory, work }: Props) {
       )}
 
       <div className="WorkItem__info">
+        {isMobile && isCategoryChip && <CategoryChip />}
         <div className="WorkItem__content">
           {title && <div className="WorkItem__title">{title}</div>}
           {year && <div className="WorkItem__year">{year}</div>}
@@ -77,15 +89,7 @@ export default function WorkItem({ category, setCategory, work }: Props) {
             {size && <div className="WorkItem__size">{size}</div>}
           </div>
         </div>
-        {categoryName && category === 0 && (
-          <button
-            className="WorkItem__category"
-            type="button"
-            onClick={() => setCategory(categoryNameToValue(categoryName))}
-          >
-            {categoryName}
-          </button>
-        )}
+        {!isMobile && isCategoryChip && <CategoryChip />}
       </div>
     </div>
   );

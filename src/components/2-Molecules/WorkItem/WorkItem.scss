@@ -43,7 +43,6 @@
 
 .WorkItem__technic {
   margin-right: 1.6rem;
-  flex: 1;
 }
 
 .WorkItem__category {
@@ -60,20 +59,22 @@
 
 @include mobileTablet {
   .WorkItem__info {
-    width: 95%;
+    display: block;
+    width: 85%;
     margin: 0 auto;
     left: 0;
     bottom: 5.6rem;
   }
 
   .WorkItem__category {
-    margin: 0 0 0 2rem;
+    margin: 0 0 1.6rem 0;
   }
 }
 
 @include mobile {
   .WorkItem__info {
-    bottom: 4rem;
+    width: 95%;
+    bottom: 0;
   }
 
   .WorkItem__gatsbyImage {
