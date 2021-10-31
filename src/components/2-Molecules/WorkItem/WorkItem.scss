@@ -20,6 +20,17 @@
   max-width: $work-slider-width;
   margin: 0 auto;
   z-index: 1000;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.WorkItem__imageModal {
+  width: $work-modal-width;
+  max-height: $work-modal-width;
+  max-width: $work-modal-width;
+  margin: 0 auto;
 }
 
 .WorkItem__content {
@@ -79,5 +90,11 @@
 
   .WorkItem__gatsbyImage {
     max-height: 30rem;
+  }
+
+  .WorkItem__imageModal {
+    .WorkItem__gatsbyImage {
+      max-height: none;
+    }
   }
 }

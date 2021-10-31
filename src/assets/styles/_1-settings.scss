@@ -52,7 +52,7 @@ $default-current-shadow: rgba($default-shadow-color, 0.9);
 
 $default-box-shadow: 0 4px 15px 0 $default-shadow;
 $default-hover-box-shadow: 0 8px 28px 0 rgba($default-shadow-color, 0.2);
-$default-current-box-shadow: 0 8px 28px 0 $default-current-shadow; 
+$default-current-box-shadow: 0 8px 28px 0 $default-current-shadow;
 
 // Transitions
 $transition-duration-fast: 0.25s;
@@ -92,6 +92,11 @@ $four_sixth: 66.667%;
 
 // Header
 $work-page-header-height: $page-margin-y-lg;
+
+// Modal
+$work-modal-height-sm: 35.5rem;
+$work-modal-width: 70rem;
+$work-modal-width-sm: 25rem;
 
 // SideMenu
 $sidemenu-width-lg: 48rem;
