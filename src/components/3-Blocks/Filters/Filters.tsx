@@ -46,7 +46,8 @@ const useStyles = makeStyles((theme: Theme) =>
       paddingBottom: 0,
       background: 'white',
       '& li': {
-        fontWeight: 200,
+        fontSize: '1.6rem',
+        fontWeight: 400,
         paddingTop: 12,
         paddingBottom: 12,
       },
