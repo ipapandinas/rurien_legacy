@@ -91,16 +91,14 @@ export default function WorkItem({ category, setCategory, work }: Props) {
   return (
     <div className="WorkItem">
       {media && (
-        <div
-          className="WorkItem__image"
-          style={sliderStyle}
-          onClick={handleOpen}
-        >
-          <Img
-            className="WorkItem__gatsbyImage"
-            alt={title}
-            fluid={media.childImageSharp.fluid}
-          />
+        <div className="WorkItem__image" style={sliderStyle}>
+          <div onClick={handleOpen}>
+            <Img
+              className="WorkItem__gatsbyImage"
+              alt={title}
+              fluid={media.childImageSharp.fluid}
+            />
+          </div>
         </div>
       )}
 
@@ -123,6 +121,7 @@ export default function WorkItem({ category, setCategory, work }: Props) {
         onClose={handleClose}
         aria-labelledby="Agrandar imagen"
         aria-describedby="Agrandar imagen"
+        disableAutoFocus={true}
         style={{
           display: 'flex',
           alignItems: 'center',
