@@ -3,6 +3,8 @@
   margin: 0 auto;
 
   .slick-arrow {
+    height: 21px;
+
     &::before {
       color: $black;
     }
