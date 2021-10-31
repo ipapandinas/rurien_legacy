@@ -107,14 +107,16 @@ export default function WorkItem({ category, setCategory, work }: Props) {
       <div className="WorkItem__info">
         {isMobile && isCategoryChip && <CategoryChip />}
         <div className="WorkItem__content">
+          {!isMobile && isCategoryChip && <CategoryChip />}
           {title && <div className="WorkItem__title">{title}</div>}
           {year && <div className="WorkItem__year">{year}</div>}
-          <div className="WorkItem__technicals">
-            {technic && <div className="WorkItem__technic">{technic}</div>}
-            {size && <div className="WorkItem__size">{size}</div>}
-          </div>
+          {(technic || size) && (
+            <div className="WorkItem__technicals">
+              {technic && <div className="WorkItem__technic">{technic}</div>}
+              {size && <div className="WorkItem__size">{size}</div>}
+            </div>
+          )}
         </div>
-        {!isMobile && isCategoryChip && <CategoryChip />}
       </div>
       <Modal
         open={open}
