@@ -46,10 +46,10 @@ export function categoryNameToValue(category: string) {
 }
 
 export function yearDecode(year: number) {
-  if (year === 200916) {
-    return '2009 - 2016';
-  } else if (year === 201719) {
-    return '2017 - 2019';
+  if (year === 200917) {
+    return '2009 - 2017';
+  } else if (year === 201820) {
+    return '2018 - 2020';
   } else {
     return year.toString();
   }
@@ -57,10 +57,10 @@ export function yearDecode(year: number) {
 
 export function yearMapping(year: string) {
   const yearValue = Number(year);
-  if (yearValue >= 2009 && yearValue < 2017) {
-    return 200916;
-  } else if (yearValue >= 2017 && yearValue < 2020) {
-    return 201719;
+  if (yearValue >= 2009 && yearValue < 2018) {
+    return 200917;
+  } else if (yearValue >= 2018 && yearValue < 2021) {
+    return 201820;
   } else {
     return yearValue;
   }
