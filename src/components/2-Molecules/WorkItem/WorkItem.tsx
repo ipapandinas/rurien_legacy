@@ -126,6 +126,7 @@ export default function WorkItem({ category, setCategory, work }: Props) {
           display: 'flex',
           alignItems: 'center',
         }}
+        BackdropProps={{ style: { backgroundColor: 'white' } }}
       >
         <div className="WorkItem__imageModal" style={modalStyle}>
           <Img
