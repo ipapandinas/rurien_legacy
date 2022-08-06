@@ -18,7 +18,7 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <SEO title="Inicio" />
+      <SEO title="Galleria de una artista bilbaína" />
       <Home />
     </Layout>
   );

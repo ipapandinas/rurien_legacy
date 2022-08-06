@@ -12,7 +12,7 @@ interface Props {
   title: string;
 }
 
-export default function SEO({ description, lang, meta = [], title }: Props) {
+export default function SEO({ description, meta = [], title }: Props) {
   const { pathname } = useLocation();
   const {
     author,
@@ -31,7 +31,7 @@ export default function SEO({ description, lang, meta = [], title }: Props) {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: 'es',
       }}
       title={metaTitle}
       titleTemplate={titleTemplate}

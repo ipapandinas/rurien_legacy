@@ -9,7 +9,7 @@ module.exports = {
     description: `Fuensanta R. Urien portfolio - Artist painter`,
     image: '/icon.png',
     title: `Fuensanta R. Urien`,
-    titleTemplate: '%s | R. Urien Art',
+    titleTemplate: '%s | Fuensanta R. Urien Art',
     url: 'https://www.fuensantarurien.com/',
   },
   plugins: [
@@ -39,7 +39,7 @@ module.exports = {
         name: `Fuensanta R. Urien - Artist painter`,
         short_name: `Fuensanta R. Urien`,
         start_url: `/`,
-        description: `Fuensanta R. Urien portfolio - Artist painter`,
+        description: `Fuensanta R. Urien portfolio - Artist painter. Fuensanta R. Urien es una artista Bilbaína cuyos cuadros han sido ampliamente expuestos por Francia y España.`,
         lang: `es`,
         background_color: `#585b5a`,
         theme_color: `#fff`,

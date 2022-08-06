@@ -82,6 +82,7 @@ export default function SideMenu() {
             type="button"
             onClick={() => dispatch(appSideMenuToggle())}
             // onMouseEnter={() => dispatch(appSideMenuToggle(false))}
+            title="Side menu toggle"
           >
             <i className="Chevron"></i>
           </button>
